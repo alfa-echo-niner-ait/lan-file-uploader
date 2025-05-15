@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>File Uploader</title>
+		<link
+			rel="stylesheet"
+			href="{{ url_for('static', filename='css/bootstrap.min.css')}}"
+		/>
+		<style>
+			.upload-item {
+				margin-bottom: 10px;
+			}
+			.progress-bar {
+				transition: width 0.1s ease;
+			}
+			.btn-info-custom {
+				background-color: #6edff6;
+				border-color: #6edff6;
+                color: #055160;
+				transition: all 0.4s ease;
+			}
+			.btn-info-custom:hover {
+				background-color: #087990;
+				border-color: #087990;
+                color: #ffffff;
+				transform: scale(1.05);
+			}
+		</style>
+	</head>
+	<body class="d-flex flex-column min-vh-100">
+		<div class="d-flex flex-row justify-content-center mx-auto my-auto">
+			<div class="card w-100">
+				<div
+					class="card-header bg-info-subtle fw-bold fs-3 text-center"
+                    style="color: #055160;"
+				>
+					Upload Files
+				</div>
+				<div class="card-body">
+					{% with messages =
+					get_flashed_messages(with_categories=true) %} {% if messages
+					%} {% for category, message in messages %}
+					<div
+						class="alert alert-{{ category }} alert-dismissible fade show text-center mb-2"
+						role="alert"
+					>
+						{{ message }}
+						<button
+							type="button"
+							class="btn-close"
+							data-bs-dismiss="alert"
+						></button>
+					</div>
+					{% endfor %} {% endif %} {% endwith %}
+
+					<form id="uploadForm" enctype="multipart/form-data">
+						<div class="mb-3">
+							<label for="file" class="form-label fw-semibold"
+								>Select File(s)</label
+							>
+							<input
+								type="file"
+								name="file"
+								id="fileInput"
+								class="form-control"
+								multiple
+							/>
+						</div>
+						<div class="text-center">
+							<button
+								type="submit"
+								class="btn btn-info-custom ps-5 pe-5 m-2 rounded-5 fw-semibold"
+							>
+								Upload
+							</button>
+						</div>
+					</form>
+
+					<div id="uploadList" class="mt-4"></div>
+				</div>
+			</div>
+		</div>
+		<footer class="mt-auto text-center p-3">
+			LAN file uploader by
+			<a
+				class="text-decoration-none fw-semibold"
+				href="https://github.com/alfa-echo-niner-ait "
+			>
+				alfa-echo-niner-ait
+			</a>
+		</footer>
+
+		<script src="{{ url_for('static', filename='js/jquery-3.7.1.min.js')}}"></script>
+		<script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+		<script src="{{ url_for('static', filename='js/upload_handler.js')}}"></script>
+	</body>
+</html>
