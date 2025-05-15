@@ -18,7 +18,7 @@ A simple web application built with **Flask**, allowing you to upload files from
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/lan-file-uploader.git
+git clone https://github.com/alfa-echo-niner-ait/lan-file-uploader.git
 cd lan-file-uploader
 ```
 
