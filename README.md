@@ -8,8 +8,14 @@ A simple web application built with **Flask**, allowing you to upload files from
 
 - 🔗 **LAN Access**: Run on your local machine and access it from any other device connected to the same WiFi.
 - 📤 **Multiple File Uploads**: Select and upload multiple files at once.
-- 🚀 **Sequential Uploads**: Files are uploaded one by one with individual progress indicators.
-- 📊 **Real-time Progress Bar**: See upload progress live using AJAX and Bootstrap 5.
+- 🚀 **Concurrent Uploads**: Upload up to 3 files simultaneously for faster transfers.
+- 📊 **Real-time Progress**: Individual and total progress bars with live updates.
+- 🌙 **Dark Mode**: Toggle dark mode (respects system preference).
+- 🖱️ **Drag & Drop**: Drop files directly onto the upload zone.
+- 📋 **Paste Support**: Copy files and paste with Ctrl+V.
+- ⚡ **Speed & ETA**: See upload speed and estimated time remaining.
+- 🔄 **Retry Failed Uploads**: One-click retry for failed or cancelled uploads.
+- 🧹 **Clear Completed**: Remove finished uploads from the list.
 
 ---
 
@@ -26,8 +32,9 @@ cd lan-file-uploader
 
 ```bash
 python -m venv venv
-source venv/bin/activate   
-# On Windows: 
+# On Linux/macOS:
+source venv/bin/activate
+# On Windows:
 .\venv\Scripts\activate
 ```
 
@@ -39,19 +46,15 @@ pip install -r requirements.txt
 
 ### 4. Folder Structure
 
-Ensure the following structure exists in your project:
-
 ```
 lan-file-uploader/
 │
 ├── app.py
-├── forms.py
 ├── static/
 │   ├── css/
 │   │   └── bootstrap.min.css
 │   ├── js/
-│   │   ├── jquery-3.7.1.min.js
-│   │   └── bootstrap.bundle.min.js
+│   │   ├── bootstrap.bundle.min.js
 │   │   └── upload_handler.js
 │   └── upload/         # Uploaded files will be saved here
 │
@@ -59,7 +62,7 @@ lan-file-uploader/
     └── index.html
 ```
 
-> 💡 You can download the required CSS and JS files from [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/download/) and [jQuery](https://jquery.com/download/).
+> 💡 You can download Bootstrap 5 CSS and JS from [getbootstrap.com](https://getbootstrap.com/docs/5.3/getting-started/download/).
 
 ### 5. Run the app
 
@@ -76,8 +79,13 @@ The app will start on your local IP address, making it accessible from other dev
 1. Start the app.
 2. Open a browser on another device connected to the same network.
 3. Go to `http://<your-computer-ip>:5000`.
-4. Select one or more files and click **Upload**.
-5. Watch real-time progress per file and see success/failure messages instantly.
+4. Select files by:
+   - Clicking the drop zone to browse
+   - Dragging and dropping files
+   - Pasting from clipboard (Ctrl+V)
+5. Click **Upload** or just drop files to start.
+6. Watch real-time progress, speed, and ETA for each file.
+7. Use retry buttons if any uploads fail.
 
 ---
 

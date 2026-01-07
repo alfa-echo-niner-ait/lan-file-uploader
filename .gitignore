@@ -1,2 +1,6 @@
 .venv
 __pycache__
+/static/upload/*
+upload_old
+upload_old_2
+upload_beauty_tools
