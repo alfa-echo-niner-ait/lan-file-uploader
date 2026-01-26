@@ -1,102 +1,92 @@
-# 📁 LAN File Uploader Flask Webapp
+# 📁 LAN File Uploader
 
-A simple web application built with **Flask**, allowing you to upload files from one device to another over the **same local network**.
-
----
-
-## ✅ Features
-
-- 🔗 **LAN Access**: Run on your local machine and access it from any other device connected to the same WiFi.
-- 📤 **Multiple File Uploads**: Select and upload multiple files at once.
-- 🚀 **Concurrent Uploads**: Upload up to 3 files simultaneously for faster transfers.
-- 📊 **Real-time Progress**: Individual and total progress bars with live updates.
-- 🌙 **Dark Mode**: Toggle dark mode (respects system preference).
-- 🖱️ **Drag & Drop**: Drop files directly onto the upload zone.
-- 📋 **Paste Support**: Copy files and paste with Ctrl+V.
-- ⚡ **Speed & ETA**: See upload speed and estimated time remaining.
-- 🔄 **Retry Failed Uploads**: One-click retry for failed or cancelled uploads.
-- 🧹 **Clear Completed**: Remove finished uploads from the list.
+A modern Flask web application for uploading files over your **local network**. Built with Tailwind CSS for a clean, responsive design.
 
 ---
 
-## 🛠️ Installation Guide
+## ✨ Features
 
-### 1. Clone the repository
+- 🔗 **LAN Access** - Access from any device on your WiFi network
+- 📤 **Multiple File Uploads** - Select and upload multiple files at once
+- 🚀 **Concurrent Uploads** - Upload up to 3 files simultaneously
+- 📊 **Real-time Progress** - Individual and total progress bars with live updates
+- 🌙 **Dark Mode** - System-aware dark/light mode toggle
+- 🖱️ **Drag & Drop** - Drop files directly onto the upload zone
+- 📋 **Paste Support** - Copy files and paste with Ctrl+V
+- ⚡ **Speed & ETA** - See upload speed and estimated time remaining
+- 🔄 **Retry Failed Uploads** - One-click retry for failed uploads
+- 📱 **Fully Responsive** - Works on desktop and mobile devices
+
+---
+
+## 🛠️ Installation
+
+### 1. Clone and Navigate
 
 ```bash
 git clone https://github.com/alfa-echo-niner-ait/lan-file-uploader.git
 cd lan-file-uploader
 ```
 
-### 2. Create a virtual environment (optional but recommended)
+### 2. Create Virtual Environment (Recommended)
 
 ```bash
 python -m venv venv
-# On Linux/macOS:
+# Linux/macOS:
 source venv/bin/activate
-# On Windows:
+# Windows:
 .\venv\Scripts\activate
 ```
 
-### 3. Install dependencies
+### 3. Install Dependencies
 
 ```bash
-pip install -r requirements.txt
+pip install flask
 ```
 
-### 4. Folder Structure
+### 4. Project Structure
 
 ```
 lan-file-uploader/
-│
-├── app.py
+├── app.py              # Main Flask application
 ├── static/
-│   ├── css/
-│   │   └── bootstrap.min.css
 │   ├── js/
-│   │   ├── bootstrap.bundle.min.js
 │   │   └── upload_handler.js
-│   └── upload/         # Uploaded files will be saved here
-│
+│   └── upload/         # Uploaded files saved here
 └── templates/
-    └── index.html
+    └── index.html      # Main UI template
 ```
 
-> 💡 You can download Bootstrap 5 CSS and JS from [getbootstrap.com](https://getbootstrap.com/docs/5.3/getting-started/download/).
-
-### 5. Run the app
+### 5. Run the App
 
 ```bash
 python app.py
 ```
 
-The app will start on your local IP address, making it accessible from other devices on the same network.
+The app will start on `http://<your-ip>:5000`, accessible from all devices on your network.
 
 ---
 
-## 📲 How to Use
+## 📖 How to Use
 
-1. Start the app.
-2. Open a browser on another device connected to the same network.
-3. Go to `http://<your-computer-ip>:5000`.
-4. Select files by:
-   - Clicking the drop zone to browse
-   - Dragging and dropping files
-   - Pasting from clipboard (Ctrl+V)
-5. Click **Upload** or just drop files to start.
-6. Watch real-time progress, speed, and ETA for each file.
-7. Use retry buttons if any uploads fail.
+1. **Start the app** - Run `python app.py`
+2. **Access remotely** - Open `http://<computer-ip>:5000` on another device
+3. **Select files** - Click, drag & drop, or paste (Ctrl+V)
+4. **Review selection** - See file count before uploading
+5. **Click Upload** - Start the upload process
+6. **Monitor progress** - Watch real-time progress, speed, and ETA
+7. **Retry if needed** - Use retry button for failed uploads
 
 ---
 
-## 📷 Demo
+## 🖼️ Screenshots
 
 <div align="center">
-  <img src="demo.png" alt="LAN File Uploader Demo" width="600">
+  <img src="demo.png" alt="LAN File Uploader" width="600">
 </div>
 
 ---
 
 ## 📝 License
 
-MIT License – feel free to modify and distribute as needed.
+MIT License - Free to use and modify.
