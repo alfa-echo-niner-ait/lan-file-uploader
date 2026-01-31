@@ -1,5 +1,4 @@
 import os
-import socket
 from flask import Flask, render_template, request, jsonify
 
 app = Flask(__name__)
@@ -31,7 +30,6 @@ def save_file(file):
     file.save(file_path)
 
 if __name__ == '__main__':
-    host_ip4 = socket.gethostbyname(socket.gethostname())
-    app.run(host=str(host_ip4), port=5000, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
 
     # app.run(debug=True) # Use this for local machine only
