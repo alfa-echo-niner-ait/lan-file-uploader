@@ -1,25 +1,25 @@
-# 📁 LAN File Uploader
+# LAN File Uploader
 
 A modern Flask web application for uploading files over your **local network**. Built with Tailwind CSS for a clean, responsive design.
 
 ---
 
-## ✨ Features
+## Features
 
-- 🔗 **LAN Access** - Access from any device on your WiFi network
-- 📤 **Multiple File Uploads** - Select and upload multiple files at once
-- 🚀 **Concurrent Uploads** - Upload up to 3 files simultaneously
-- 📊 **Real-time Progress** - Individual and total progress bars with live updates
-- 🌙 **Dark Mode** - System-aware dark/light mode toggle
-- 🖱️ **Drag & Drop** - Drop files directly onto the upload zone
-- 📋 **Paste Support** - Copy files and paste with Ctrl+V
-- ⚡ **Speed & ETA** - See upload speed and estimated time remaining
-- 🔄 **Retry Failed Uploads** - One-click retry for failed uploads
-- 📱 **Fully Responsive** - Works on desktop and mobile devices
+- **LAN Access** - Access from any device on your WiFi network
+- **Multiple File Uploads** - Select and upload multiple files at once
+- **Concurrent Uploads** - Upload up to 3 files simultaneously
+- **Real-time Progress** - Individual and total progress bars with live updates
+- **Dark Mode** - System-aware dark/light mode toggle
+- **Drag & Drop** - Drop files directly onto the upload zone
+- **Paste Support** - Copy files and paste with Ctrl+V
+- **Speed & ETA** - See upload speed and estimated time remaining
+- **Retry Failed Uploads** - One-click retry for failed uploads
+- **Fully Responsive** - Works on desktop and mobile devices
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 ### 1. Clone and Navigate
 
@@ -67,7 +67,7 @@ The app will start on `http://<your-ip>:5000`, accessible from all devices on yo
 
 ---
 
-## 📖 How to Use
+## How to Use
 
 1. **Start the app** - Run `python app.py`
 2. **Access remotely** - Open `http://<computer-ip>:5000` on another device
@@ -79,7 +79,7 @@ The app will start on `http://<your-ip>:5000`, accessible from all devices on yo
 
 ---
 
-## 🖼️ Screenshots
+## Screenshots
 
 <div align="center">
   <img src="demo.png" alt="LAN File Uploader" width="600">
@@ -87,6 +87,6 @@ The app will start on `http://<your-ip>:5000`, accessible from all devices on yo
 
 ---
 
-## 📝 License
+## License
 
 MIT License - Free to use and modify.
